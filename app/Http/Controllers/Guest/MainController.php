@@ -11,15 +11,10 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    // public function index()
-    // {
-    //     //RICHIEDO DATI DAL DB INSERISCO IN $data tutti i dati del mio DB
-    //     // $data = MyClass::all();  SELECT * FROM MyTable in SQL
-
-    //     //CICLO PER STAMARE TUTTI I DATI DEL DB
-    //    // foreach($data as $singleData)
-    //     return view('home',compact('data'));
-    // }
+     public function index()
+     {
+         return view('home');
+     }
 
     // public function show(id)
     // {

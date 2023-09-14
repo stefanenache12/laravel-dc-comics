@@ -16,4 +16,4 @@ use App\Http\Controllers\Guest\MainController;
 |
 */
 
-//Route::get('/',[MainController::class, 'index']);
+Route::get('/',[MainController::class, 'index']);

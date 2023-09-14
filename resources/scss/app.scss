@@ -2,15 +2,3 @@
 @import "./variables";
 @import "./mixins";
 
-header {
-    color: $primary-color;
-}
-
-main {
-    color: yellow;
-    @include main-styles;
-}
-
-footer {
-    color: red;
-}
