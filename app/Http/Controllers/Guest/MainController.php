@@ -15,12 +15,4 @@ class MainController extends Controller
      {
          return view('home');
      }
-
-    // public function show(id)
-    // {
-    //     //RICHIEDO UN SOLO PRODOTTO AL MIO DB
-    //     // $singleData = MyClass::find(id);  PRENDE UN SOLO PRODOTTO DAL DB IN BASE AL ID
-
-    //     return view('singleData', compact('singleData));
-    // }
 }

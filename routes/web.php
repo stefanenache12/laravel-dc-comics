@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Controlers
-use App\Http\Controllers\Guest\MainController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +15,10 @@ use App\Http\Controllers\Guest\MainController;
 |
 */
 
-Route::get('/',[MainController::class, 'index']);
+// Controlers
+use App\Http\Controllers\Guest\MainController;
+use App\Http\Controllers\Admin\ComicController;
+
+Route::get('/',[MainController::class, 'index'])->name('home');
+
+Route::resource('comics',ComicController::class);
