@@ -2,6 +2,17 @@
 @import "./variables";
 @import "./mixins";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(150, 150, 150);
+    color: whitesmoke;
+}
+
 header {
     background-color: rgb(10, 31, 96);
     color: white;
