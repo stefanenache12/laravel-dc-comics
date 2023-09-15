@@ -33,9 +33,6 @@ class ComicsTableSeeder extends Seeder
             $comic->sale_date = $comicElement['sale_date'];
             $comic->type = $comicElement['type'];
 
-            $comic->artists = json_encode($comicElement['artists']);
-
-            $comic->writers = json_encode($comicElement['writers']);
             
             $comic->save();
         }

@@ -22,7 +22,7 @@
                 <th scope="col">Series</th>
                 <th scope="col">Sale Date</th>
                 <th scope="col">Type</th>
-                <th scope="col">Actions</th>
+                <th colspan="3" class="text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -40,6 +40,27 @@
                                 VIEW
                             </button>
                         </a>
+                    </td>
+                    <td>
+                        <a href="{{ route('comics.edit',['comic'=> $comic->id]) }}">
+                            <button class="btn btn-warning">
+                                UPDATE
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                        <form
+                            action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"
+                            class="d-inline-block"
+                            method="POST"
+                            onsubmit="return confirm('Are you sure you want to Delete this Comic?');">
+                            @csrf
+                            @method('DELETE')
+                            
+                            <button type="submit" class="btn btn-danger">
+                                DELETE
+                            </button>
+                        </form>
                     </td>
                   </tr>
                 @endforeach

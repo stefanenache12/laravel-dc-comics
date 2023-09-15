@@ -39,14 +39,6 @@
                     <label for="type" class="form-label">Type</label>
                     <input type="text" maxlength="128" class="form-control" id="type" name="type" placeholder="Enter value.." required>
                 </div>
-                <div class="mb-3">
-                    <label for="artists" class="form-label">Artists</label>
-                    <input type="text" maxlength="128" class="form-control" id="artists" name="artists" placeholder="Enter value.." >
-                </div>
-                <div class="mb-3">
-                    <label for="writers" class="form-label">Writers</label>
-                    <input type="text" maxlength="128" class="form-control" id="writers" name="writers" placeholder="Enter value.." >
-                </div>
                 <button type="submit" class="btn btn-success">
                     ADD COMIC
                 </button>
