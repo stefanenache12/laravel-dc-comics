@@ -13,7 +13,7 @@
             <div class="col text-center">
                 <h5 >{{ $comic->title }}</h5>
                 <h6>Type: {{ $comic->type }} </h6>
-                <h5>Price: {{ $comic->price }}</h5>
+                <h5>Price: $ {{ $comic->price }}</h5>
                 <h6>Sale date: {{ $comic->sale_date }}</h6>
                 <p class="mt-4">
                     {{ $comic->description }}

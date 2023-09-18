@@ -9,13 +9,13 @@
 }
 
 body {
-    background-color: rgb(230, 230, 230);
-    color: black;
+    background-color: #1C1C1C;
+    color: whitesmoke;
 }
 
 header {
-    background-color: rgb(10, 31, 96);
-    color: white;
+    background-color: rgb(223, 223, 223);
+    color: #1C1C1C;
     padding: 30px 0;
 
     nav {
@@ -30,7 +30,7 @@ header {
                 justify-content: space-between;
 
                 li a {
-                    color: white;
+                    color: #1C1C1C;
                     padding: 0 15px;
                     font-size: 1.1rem;
                     text-decoration: none;
@@ -44,3 +44,4 @@ header {
         }
     }
 }
+
