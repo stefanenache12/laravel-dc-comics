@@ -18,6 +18,19 @@
                 <p class="mt-4">
                     {{ $comic->description }}
                 </p>
+                <h5>
+                    WRITERS
+                </h5>
+                <p>
+                    {{ $comic->writers }}
+                </p>
+
+                <h5>
+                    ARTISTS
+                </h5>
+                <p>
+                    {{ $comic->artists }}
+                </p>
             </div>
         </div>
     </div>
