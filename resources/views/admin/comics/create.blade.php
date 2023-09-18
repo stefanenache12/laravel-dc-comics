@@ -28,7 +28,7 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    <textarea class="form-control" id="description" name="description" rows="2" placeholder="Add a description" required></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="2" placeholder="Add a description" required>{{ old('description') }}</textarea>
                 </div>
 
                 <div class="mb-3">
@@ -38,7 +38,7 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    <input type="text" maxlength="1024" class="form-control" id="thumb" name="thumb" placeholder="Enter an img link">
+                    <input type="text" maxlength="1024" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}" placeholder="Enter an img link">
                 </div>
 
                 <div class="mb-3">
@@ -48,7 +48,7 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    <input type="text" maxlength="128" class="form-control" id="price" name="price" placeholder="Enter value(ex: 4.99 )" required>
+                    <input type="text" maxlength="128" class="form-control" id="price" name="price" value="{{ old('price') }}" placeholder="Enter value(ex: 4.99 )" required>
                 </div>
 
                 <div class="mb-3">
@@ -58,7 +58,7 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    <input type="text" maxlength="64" class="form-control" id="series" name="series" placeholder="Enter value.." >
+                    <input type="text" maxlength="64" class="form-control" id="series" name="series" value="{{ old('series') }}" placeholder="Enter value.." >
                 </div>
 
                 <div class="mb-3">
@@ -68,7 +68,7 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    <input type="date" maxlength="64" class="form-control" id="sale_date" name="sale_date" placeholder="Enter value..">
+                    <input type="date" maxlength="64" class="form-control" id="sale_date" name="sale_date" value="{{ old('sale_date') }}" placeholder="Enter value..">
                 </div>
 
                 <div class="mb-3">
@@ -78,17 +78,17 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    <input type="text" maxlength="64" class="form-control" id="type" name="type" placeholder="Enter value..">
+                    <input type="text" maxlength="64" class="form-control" id="type" name="type" value="{{ old('type') }}" placeholder="Enter value..">
                 </div>
 
                 <div class="mb-3">
                     <label for="artists" class="form-label">Artists</label>
-                    <input type="text" maxlength="128" class="form-control" id="artists" name="artists" placeholder="Add the artists">
+                    <input type="text" maxlength="128" class="form-control" id="artists" name="artists" value="{{ old('artists') }}" placeholder="Add the artists">
                 </div>
 
                 <div class="mb-3">
                     <label for="writers" class="form-label">Writers</label>
-                    <input type="text" maxlength="128" class="form-control" id="writers" name="writers" placeholder="Add the writers">
+                    <input type="text" maxlength="128" class="form-control" id="writers" name="writers" value="{{ old('writers') }}" placeholder="Add the writers">
                 </div>
 
                 <button type="submit" class="m-auto col-12 btn btn-success">

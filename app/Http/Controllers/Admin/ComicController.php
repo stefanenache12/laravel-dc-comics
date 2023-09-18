@@ -67,13 +67,15 @@ class ComicController extends Controller
 
         $comic = new Comic();
 
-        $comic ->title =$formData['title'];
-        $comic ->description =$formData['description'];
-        $comic ->thumb =$formData['thumb'];
-        $comic ->price =$formData['price'];
-        $comic ->series =$formData['series'];
-        $comic ->sale_date =$formData['sale_date'];
-        $comic ->type =$formData['type'];
+        $comic -> title = $formData['title'];
+        $comic -> description = $formData['description'];
+        $comic -> thumb = $formData['thumb'];
+        $comic -> price = $formData['price'];
+        $comic -> series = $formData['series'];
+        $comic -> sale_date = $formData['sale_date'];
+        $comic -> type = $formData['type'];
+        $comic -> artists = $formData['artists'];
+        $comic -> writers = $formData['writers'];
         $comic->save();
 
         return redirect()->route('comics.index');
@@ -105,15 +107,41 @@ class ComicController extends Controller
     public function update(Request $request, string $id)
     {
         $comic = Comic::findOrFail($id);
+
+        $request->validate([
+
+            'title' => 'required|max:250',
+            'description' => 'required',
+            'thumb' => 'max:1024|nullable',
+            'price' => 'required|numeric',
+            'series' => 'max:64|nullable',
+            'sale_date' => 'date|nullable',
+            'type' => 'max:64|nullable',
+            'artists' => 'nullable',
+            'witers' => 'nullable'
+        ],
+        [
+            'title.required' => 'Il titolo è obbligatorio',
+            'title.max' => 'Il titolo non può essere più lungo di 250 caratteri',
+            'description.required' => 'La descrizione è obligatoria',
+            'thumb.max' => 'Il Link non pùo essere più lungo di 1024 caratteri',
+            'price.required' => 'Il prezzo è obligatorio',
+            'price.numeric' => ' Il prezzo deve essere un numero',
+            'series.max' => 'La serie non pùo essere più lunga di 64 caratteri',
+            'type.max' => 'Il tipo non pùo essere più lungo di 64 caratteri',
+        ]  
+    );
         $formData = $request->all();
 
-        $comic ->title =$formData['title'];
-        $comic ->description =$formData['description'];
-        $comic ->thumb =$formData['thumb'];
-        $comic ->price =$formData['price'];
-        $comic ->series =$formData['series'];
-        $comic ->sale_date =$formData['sale_date'];
-        $comic ->type =$formData['type'];
+        $comic -> title = $formData['title'];
+        $comic -> description = $formData['description'];
+        $comic -> thumb = $formData['thumb'];
+        $comic -> price = $formData['price'];
+        $comic -> series = $formData['series'];
+        $comic -> sale_date = $formData['sale_date'];
+        $comic -> type = $formData['type'];
+        $comic -> artists = $formData['artists'];
+        $comic -> writers = $formData['writers'];
         $comic->save();
 
         return redirect()->route('comics.index');
